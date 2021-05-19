@@ -10,17 +10,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     })
 })
 
-function handleClick(event) {
-    //no target ele vai pegar o elemento que recebeu o evento e colocar em uma variavel square.
-    let square = event.target
-    //aqui nos pegamos o id do square que recebeu o target acima e vamos chama-lo de position.
-    let position = square.id
-    
-    //ai aqui nos passamos a position que e o id do nosso elemento para o handleMove que esta la no game.js.
-    handleMove(position)
-    //e aqui rodamos outra função que vai atualizar nossos objetos colocando o escudo ou a as espadas.
-    updateSquares()
-}
 function updateSquares(){
     //aqui nos fazemos igual la em cima pegamos todos os elementos square e adicionamos ele a uma variavel squares.
     let squares = document.querySelectorAll(".square")
