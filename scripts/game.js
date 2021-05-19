@@ -13,7 +13,8 @@ function handleMove(position){
     //depois fazemos uma verificação com if para que se o playerTime for igual a 0 ele mude para 1 e se for igual a 1 ele mude para 0
     if(playerTime == 0){
         playerTime = 1
-    }else{
+    }
+    else{
         playerTime = 0
     }
 }
