@@ -17,23 +17,40 @@ function handleClick(event) {
     let position = square.id
     
     //ai aqui nos passamos a position que e o id do nosso elemento para o handleMove que esta la no game.js.
-    handleMove(position)
+    if(handleMove(position)){
+        let result = document.getElementById("result")
+        result.innerHTML = "Parabéns você ganhou✨"
+    }
     //e aqui rodamos outra função que vai atualizar nossos objetos colocando o escudo ou a as espadas.
-    updateSquares()
+    updateSquares(position)
 }
-function updateSquares(){
-    //aqui nos fazemos igual la em cima pegamos todos os elementos square e adicionamos ele a uma variavel squares.
-    let squares = document.querySelectorAll(".square")
+//forma mais simplificada do updateSquares a baixo desse.
+function updateSquares(position){
+    //aqui ele vai pegar o square de so uma posição e não de todas e vai mudalo para string.
+    let square = document.getElementById(position.toString())
+    //depois vamos pegar a variavel symbol que esta la no game.js, aonde ele contem o: O e o X, que serão adicionados aos elementos como uma class.
+    let symbol = board[position]
 
-    //depois ele vai fazer um forEach() que vai executar uma função em cada um dos elemento do squares.
-    squares.forEach((square)=>{
-        //aqui nos pegamos o id do square que recebeu o target acima e vamos chama-lo de position.
-        let position = square.id
-        //depois vamos pegar a variavel symbol que esta la no game.js, aonde ele contem o: O e o X, que serão adicionados aos elementos como uma class.
-        let symbol = board[position]
-        //depois fazemos uma verificação, se o symbol do elemento estiver vazio ele vai adicionar uma div que tem a classe com o symbol que e o: O ou o X
-        if(symbol != ''){
-            square.innerHTML = `<div class='${symbol}'></div>`
-        }
-    })
+    //depois fazemos uma verificação, se o symbol do elemento estiver vazio ele vai adicionar uma div que tem a classe com o symbol que e o: O ou o X
+    square.innerHTML = `<div class='${symbol}'></div>`
 }
+
+
+//Forma que estavamos usando antes---------------
+
+// function updateSquares(){
+//     //aqui nos fazemos igual la em cima pegamos todos os elementos square e adicionamos ele a uma variavel squares.
+//     let squares = document.querySelectorAll(".square")
+
+//     //depois ele vai fazer um forEach() que vai executar uma função em cada um dos elemento do squares.
+//     squares.forEach((square)=>{
+//         //aqui nos pegamos o id do square que recebeu o target acima e vamos chama-lo de position.
+//         let position = square.id
+//         //depois vamos pegar a variavel symbol que esta la no game.js, aonde ele contem o: O e o X, que serão adicionados aos elementos como uma class.
+//         let symbol = board[position]
+//         //depois fazemos uma verificação, se o symbol do elemento estiver vazio ele vai adicionar uma div que tem a classe com o symbol que e o: O ou o X
+//         if(symbol != ''){
+//             square.innerHTML = `<div class='${symbol}'></div>`
+//         }
+//     })
+// }
