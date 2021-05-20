@@ -2,13 +2,14 @@ body{
     text-align: center;
 }
 h1, h2{
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700; 
 }
 .square{
     width: 100px;
     height: 100px;
-    background-color: beige;
-    border: 1px solid gray;
+    background-color: #1E90FF;
+    border-radius: 5px;
     display: inline-block;
 }
 
@@ -37,4 +38,25 @@ h1, h2{
     bottom: 0;
     left: 0;
     right: 0;
+}
+#reset{
+    position: relative;
+    width: 250px;
+    height: 50px;
+    font-size:20px;
+    color: #FFFFFF;
+    background: linear-gradient(275.76deg, #FF384A 44.33%, #FF5463 98.56%);
+    box-shadow: 0px 4px 10px rgba(255, 56, 74, 0.5);
+    border: none;
+    border-radius: 50px;
+    margin: 0;
+    margin-top: 5px;
+}
+.buttonDiv{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

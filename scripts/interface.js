@@ -34,9 +34,11 @@ function updateSquares(position){
     //depois fazemos uma verificação, se o symbol do elemento estiver vazio ele vai adicionar uma div que tem a classe com o symbol que e o: O ou o X
     square.innerHTML = `<div class='${symbol}'></div>`
 }
+function reset(){
+    window.location.reload()
+}
 
-
-//Forma que estavamos usando antes---------------
+//Forma que estavamos usando o updateSquares antes---------------
 
 // function updateSquares(){
 //     //aqui nos fazemos igual la em cima pegamos todos os elementos square e adicionamos ele a uma variavel squares.
