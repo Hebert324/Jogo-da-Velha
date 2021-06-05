@@ -59,9 +59,5 @@ function isWin(){
     return false
 }
 function reset(){
-    let board = ['', '', '', '', '', '', '', '', '']
-    playerTime = 0
-    gameOver = false
-    result.innerHTML = ""
-    restart()
+    window.location.reload()
 }

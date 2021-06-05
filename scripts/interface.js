@@ -34,15 +34,3 @@ function updateSquares(position){
     //depois fazemos uma verificação, se o symbol do elemento estiver vazio ele vai adicionar uma div que tem a classe com o symbol que e o: O ou o X
     square.innerHTML = `<div class='${symbol}'></div>`
 }
-
-//restart
-
-function restart(){
-    let squares = document.querySelectorAll(".square")
-    
-    squares.forEach((square)=>{
-        let position = square.id
-        let symbol = ''
-        square.innerHTML = `<div class='${symbol}'></div>`
-    })
-}
